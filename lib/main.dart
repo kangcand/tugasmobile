@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Tugas Mobile",
+      title: "Tugas Mobile Flutter",
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
