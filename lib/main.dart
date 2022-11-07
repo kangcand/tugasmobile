@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
-import 'screens/started_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget started = SplashScreenView(
-      navigateRoute: StartedScreen(),
+      navigateRoute: MenuScreen(),
       duration: 5000,
       imageSize: 250,
       imageSrc: "assets/images/logo.png",
-      text: "Candra Herdiansyah",
+      // text: "Candra Herdiansyah",
       textType: TextType.ColorizeAnimationText,
       textStyle: TextStyle(
         fontSize: 40.0,

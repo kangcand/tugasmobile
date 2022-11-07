@@ -1,13 +1,17 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:tugas_mobile/screens/bottom_menu.dart';
 
-class StartedScreen extends StatelessWidget {
+class MenuScreen extends StatefulWidget {
+  @override
+  State<MenuScreen> createState() => _MenuScreenState();
+}
+
+class _MenuScreenState extends State<MenuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Tugas Mobile"),
-      //   centerTitle: true,
-      // ),
+      bottomNavigationBar: BottomMenu(),
       body: SafeArea(
         child: Container(
           height: double.infinity,
@@ -17,8 +21,9 @@ class StartedScreen extends StatelessWidget {
                 image: AssetImage("assets/images/background.png"),
                 fit: BoxFit.cover),
           ),
-          child: Center(
-            child: Text("Hello World"),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[],
           ),
         ),
       ),
