@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
+import 'package:tugas_mobile/screens/bottom_menu.dart';
 
 import 'screens/home_screen.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget started = SplashScreenView(
-      navigateRoute: MenuScreen(),
+      navigateRoute: BottomMenu(),
       duration: 5000,
       imageSize: 250,
       imageSrc: "assets/images/logo.png",
