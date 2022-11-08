@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/rendering/viewport.dart';
 import 'package:tugas_mobile/helpers/size_helper.dart';
+import 'package:flutter_svg/avd.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -89,12 +91,21 @@ class ProfileScreen extends StatelessWidget {
                   height: 75,
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/profile.jpg'),
-                        fit: BoxFit.cover),
                     gradient: LinearGradient(
-                        colors: [Colors.blueAccent, Colors.redAccent]),
+                      colors: [
+                        Colors.transparent,
+                        Colors.transparent,
+                        Colors.transparent,
+                      ],
+                      begin: Alignment.bottomRight,
+                      end: Alignment.topLeft,
+                    ),
                     borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: SvgPicture.asset(
+                    "assets/svg_icons/twitter.svg",
+                    // color: Colors.blueGrey,
+                    matchTextDirection: true,
                   ),
                 ),
                 Container(
@@ -102,12 +113,21 @@ class ProfileScreen extends StatelessWidget {
                   height: 75,
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/profile.jpg'),
-                        fit: BoxFit.cover),
                     gradient: LinearGradient(
-                        colors: [Colors.blueAccent, Colors.redAccent]),
+                      colors: [
+                        Colors.transparent,
+                        Colors.transparent,
+                        Colors.transparent,
+                      ],
+                      begin: Alignment.bottomRight,
+                      end: Alignment.topLeft,
+                    ),
                     borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: SvgPicture.asset(
+                    "assets/svg_icons/facebook.svg",
+                    // color: Colors.blueGrey,
+                    matchTextDirection: true,
                   ),
                 ),
                 Container(
@@ -115,12 +135,21 @@ class ProfileScreen extends StatelessWidget {
                   height: 75,
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/profile.jpg'),
-                        fit: BoxFit.cover),
                     gradient: LinearGradient(
-                        colors: [Colors.blueAccent, Colors.redAccent]),
+                      colors: [
+                        Colors.transparent,
+                        Colors.transparent,
+                        Colors.transparent,
+                      ],
+                      begin: Alignment.bottomRight,
+                      end: Alignment.topLeft,
+                    ),
                     borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: SvgPicture.asset(
+                    "assets/svg_icons/instagram.svg",
+                    // color: Colors.blueGrey,
+                    matchTextDirection: true,
                   ),
                 ),
                 Container(
@@ -128,12 +157,21 @@ class ProfileScreen extends StatelessWidget {
                   height: 75,
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/profile.jpg'),
-                        fit: BoxFit.cover),
                     gradient: LinearGradient(
-                        colors: [Colors.blueAccent, Colors.redAccent]),
+                      colors: [
+                        Colors.transparent,
+                        Colors.transparent,
+                        Colors.transparent,
+                      ],
+                      begin: Alignment.bottomRight,
+                      end: Alignment.topLeft,
+                    ),
                     borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: SvgPicture.asset(
+                    "assets/svg_icons/linkedin.svg",
+                    // color: Colors.blueGrey,
+                    matchTextDirection: true,
                   ),
                 ),
               ],
