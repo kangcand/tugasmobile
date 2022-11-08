@@ -1,10 +1,18 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import '../helpers/size_helper.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({
-    Key? key,
-  }) : super(key: key);
+  final List wisata = [
+    "Ubud",
+    "Nusa Penida",
+    "Pantai Kuta",
+  ];
+
+  final List images = [
+    "assets/images/ubud.jpg",
+    "assets/images/nusapenida.jpg",
+    "assets/images/kuta.jpg",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +25,29 @@ class HomeScreen extends StatelessWidget {
               image: AssetImage("assets/images/background.png"),
               fit: BoxFit.cover),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Home",
-            )
-          ],
+        child: ListView.builder(
+          itemCount: wisata.length,
+          itemBuilder: (context, index) {
+            return Container(
+              alignment: Alignment.bottomLeft,
+              height: displayHeight(context) * 0.25,
+              margin: EdgeInsets.all(16),
+              padding: EdgeInsets.all(10), //You can use EdgeInsets like above
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                    image: AssetImage("${images[index]}"), fit: BoxFit.cover),
+              ),
+              child: Text(
+                "${wisata[index]}",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  // color: Colors.black,
+                  fontSize: 14,
+                ),
+              ),
+            );
+          },
         ),
       ),
     );

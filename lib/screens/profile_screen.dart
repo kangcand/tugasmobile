@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/rendering/viewport.dart';
+import 'package:tugas_mobile/helpers/size_helper.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -17,10 +18,7 @@ class ProfileScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: 16,
-            ),
-            SizedBox(
-              height: 16,
+              height: 32,
             ),
             CircleAvatar(
               backgroundColor: Colors.black,
@@ -31,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             Container(
-              width: 360,
+              width: displayWidth(context) * 0.95,
               height: 50,
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
@@ -56,9 +54,9 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             Container(
-              width: 360,
+              width: displayWidth(context) * 0.95,
               height: 50,
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.symmetric(vertical: 10),
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
@@ -80,13 +78,16 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: 16,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   width: 75,
                   height: 75,
-                  margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/images/profile.jpg'),
@@ -99,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
                 Container(
                   width: 75,
                   height: 75,
-                  margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/images/profile.jpg'),
@@ -112,7 +113,7 @@ class ProfileScreen extends StatelessWidget {
                 Container(
                   width: 75,
                   height: 75,
-                  margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/images/profile.jpg'),
@@ -125,7 +126,7 @@ class ProfileScreen extends StatelessWidget {
                 Container(
                   width: 75,
                   height: 75,
-                  margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/images/profile.jpg'),
@@ -137,17 +138,20 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              height: 16,
+            ),
             Expanded(
               child: ListView(
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 children: [
                   Container(
-                    width: 360,
+                    width: displayWidth(context) * 0.95,
                     height: 360,
                     padding:
                         EdgeInsets.all(10), //You can use EdgeInsets like above
-                    margin: EdgeInsets.all(5),
+                    margin: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
