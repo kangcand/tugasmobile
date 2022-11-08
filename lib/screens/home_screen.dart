@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final List<String> imageList = [
+    "assets/images/ubud.jpg",
+    "assets/images/nusapenida.jpg",
+    "assets/images/kuta.jpg",
+    "assets/images/rinjani.jpg",
+    "assets/images/rancaupas.jpg",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -15,9 +29,31 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "Home",
-            )
+            Expanded(
+              child: Container(
+                child: GFCarousel(
+                  viewportFraction: 0.5,
+                  autoPlay: true,
+                  items: imageList.map(
+                    (url) {
+                      return Container(
+                        margin: EdgeInsets.all(10.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                          child: Image.asset(url,
+                              fit: BoxFit.cover, width: 1000.0),
+                        ),
+                      );
+                    },
+                  ).toList(),
+                  onPageChanged: (index) {
+                    setState(() {
+                      index;
+                    });
+                  },
+                ),
+              ),
+            ),
           ],
         ),
       ),
