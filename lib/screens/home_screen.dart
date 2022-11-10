@@ -39,7 +39,81 @@ class _HomeScreenState extends State<HomeScreen> {
               image: AssetImage("assets/images/background.png"),
               fit: BoxFit.cover),
         ),
-        child: Center(),
+        child: SingleChildScrollView(
+          primary: false,
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 20),
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    // height: 300,
+                    aspectRatio: 16 / 9,
+                    viewportFraction: 0.9,
+                    initialPage: 0,
+                    enableInfiniteScroll: true,
+                    autoPlay: true,
+                    autoPlayInterval: Duration(seconds: 2),
+                    autoPlayAnimationDuration: Duration(milliseconds: 800),
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    // enlargeCenterPage: true,
+                    scrollDirection: Axis.horizontal,
+                  ),
+                  items: imageList
+                      .map(
+                        (item) => Container(
+                          margin: EdgeInsets.all(5),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(10.0),
+                            ),
+                            child: Image.asset(item,
+                                fit: BoxFit.cover, width: 1000),
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
+              ),
+              ListView(
+                physics: ScrollPhysics(),
+                shrinkWrap: true,
+                children: [
+                  Container(
+                    height: 100,
+                    margin: EdgeInsets.all(10),
+                    color: Colors.white,
+                    child: Text("Hallo"),
+                  ),
+                  Container(
+                    height: 100,
+                    margin: EdgeInsets.all(10),
+                    color: Colors.white,
+                    child: Text("Hallo"),
+                  ),
+                  Container(
+                    height: 100,
+                    margin: EdgeInsets.all(10),
+                    color: Colors.white,
+                    child: Text("Hallo"),
+                  ),
+                  Container(
+                    height: 100,
+                    margin: EdgeInsets.all(10),
+                    color: Colors.white,
+                    child: Text("Hallo"),
+                  ),
+                  Container(
+                    height: 100,
+                    margin: EdgeInsets.all(10),
+                    color: Colors.white,
+                    child: Text("Hallo"),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
