@@ -62,10 +62,10 @@ class _BottomMenuState extends State<BottomMenu> {
 
   final textScreen = [
     "Home",
-    "Daftar Wisata",
-    "Detail Wisata",
-    "Booking Tiket Wisata",
-    "Profil"
+    "List Tour",
+    "Detail Tour",
+    "Booking Tour Ticket",
+    "Profile"
   ];
 
   @override
@@ -97,6 +97,7 @@ class _BottomMenuState extends State<BottomMenu> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(textScreen[_page]),
+        backgroundColor: Colors.blueGrey.shade900,
       ),
       body: screens[_page],
     );

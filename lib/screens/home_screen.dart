@@ -1,7 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:tugas_mobile/helpers/size_helper.dart';
+import 'package:shimmer/shimmer.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -19,6 +21,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   int _current = 0;
   final CarouselController _controller = CarouselController();
+  bool _enabled = true;
+
+  void initState() {
+    // startTimeout();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,51 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
               image: AssetImage("assets/images/background.png"),
               fit: BoxFit.cover),
         ),
-        child: SingleChildScrollView(
-          child: SizedBox(
-            height: displayHeight(context) * 0.5,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Expanded(
-                  child: CarouselSlider(
-                    options: CarouselOptions(
-                      // height: 300,
-                      aspectRatio: 16 / 9,
-                      viewportFraction: 0.8,
-                      initialPage: 0,
-                      enableInfiniteScroll: true,
-                      autoPlay: true,
-                      autoPlayInterval: Duration(seconds: 2),
-                      autoPlayAnimationDuration: Duration(milliseconds: 800),
-                      autoPlayCurve: Curves.fastOutSlowIn,
-                      // enlargeCenterPage: true,
-                      scrollDirection: Axis.horizontal,
-                    ),
-                    items: imageList
-                        .map(
-                          (item) => Container(
-                            margin: EdgeInsets.all(5),
-                            child: ClipRRect(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10.0)),
-                              child: Image.asset(item,
-                                  fit: BoxFit.cover, width: 1000),
-                            ),
-                          ),
-                        )
-                        .toList(),
-                  ),
-                ),
-                Container(
-                  height: 200,
-                  width: 400,
-                  decoration: BoxDecoration(color: Colors.black),
-                ),
-              ],
-            ),
-          ),
-        ),
+        child: Center(),
       ),
     );
   }
