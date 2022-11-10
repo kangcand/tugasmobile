@@ -32,8 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height: MediaQuery.of(context).size.height * 1,
+        width: MediaQuery.of(context).size.height * 1,
         decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage("assets/images/background.png"),
@@ -75,42 +75,276 @@ class _HomeScreenState extends State<HomeScreen> {
                       .toList(),
                 ),
               ),
+              SizedBox(
+                height: 24,
+              ),
               ListView(
                 physics: ScrollPhysics(),
                 shrinkWrap: true,
                 children: [
-                  Container(
-                    height: 100,
-                    margin: EdgeInsets.all(10),
-                    color: Colors.white,
-                    child: Text("Hallo"),
+                  Center(
+                    child: Text(
+                      "Features",
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.yellow.shade600,
+                              Colors.black26,
+                              Colors.blue.shade800
+                            ],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft,
+                          ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        width: displayWidth(context) * 0.3,
+                        margin: EdgeInsets.all(5),
+                        child: FlutterLogo(),
+                      ),
+                      Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.yellow.shade600,
+                              Colors.black26,
+                              Colors.blue.shade800
+                            ],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft,
+                          ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        width: displayWidth(context) * 0.3,
+                        margin: EdgeInsets.all(5),
+                        child: FlutterLogo(),
+                      ),
+                      Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.yellow.shade600,
+                              Colors.black26,
+                              Colors.blue.shade800
+                            ],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft,
+                          ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        width: displayWidth(context) * 0.3,
+                        margin: EdgeInsets.all(5),
+                        child: FlutterLogo(),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.yellow.shade600,
+                              Colors.black26,
+                              Colors.blue.shade800
+                            ],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft,
+                          ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        width: displayWidth(context) * 0.3,
+                        margin: EdgeInsets.all(5),
+                        child: FlutterLogo(),
+                      ),
+                      Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.yellow.shade600,
+                              Colors.black26,
+                              Colors.blue.shade800
+                            ],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft,
+                          ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        width: displayWidth(context) * 0.3,
+                        margin: EdgeInsets.all(5),
+                        child: FlutterLogo(),
+                      ),
+                      Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.yellow.shade600,
+                              Colors.black26,
+                              Colors.blue.shade800
+                            ],
+                            begin: Alignment.bottomRight,
+                            end: Alignment.topLeft,
+                          ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        width: displayWidth(context) * 0.3,
+                        margin: EdgeInsets.all(5),
+                        child: FlutterLogo(),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Center(
+                    child: Text(
+                      "News",
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 18,
                   ),
                   Container(
-                    height: 100,
+                    height: 120,
                     margin: EdgeInsets.all(10),
-                    color: Colors.white,
-                    child: Text("Hallo"),
+                    padding: EdgeInsets.all(10),
+                    alignment: Alignment.bottomLeft,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.yellow.shade600,
+                          Colors.black26,
+                          Colors.blue.shade800
+                        ],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                      ),
+                      color: Colors.white,
+                      image: DecorationImage(
+                          image: NetworkImage("https://picsum.photos/200"),
+                          fit: BoxFit.cover),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
+                      ),
+                    ),
+                    width: displayWidth(context) * 0.3,
+                    child: Text(
+                      "Lorem Ipsum",
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          // color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                   Container(
-                    height: 100,
+                    height: 120,
                     margin: EdgeInsets.all(10),
-                    color: Colors.white,
-                    child: Text("Hallo"),
+                    padding: EdgeInsets.all(10),
+                    alignment: Alignment.bottomLeft,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.yellow.shade600,
+                          Colors.black26,
+                          Colors.blue.shade800
+                        ],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                      ),
+                      color: Colors.white,
+                      image: DecorationImage(
+                          image: NetworkImage("https://picsum.photos/200/100"),
+                          fit: BoxFit.cover),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
+                      ),
+                    ),
+                    width: displayWidth(context) * 0.3,
+                    child: Text(
+                      "Lorem Ipsum",
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          // color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                   Container(
-                    height: 100,
+                    height: 120,
                     margin: EdgeInsets.all(10),
-                    color: Colors.white,
-                    child: Text("Hallo"),
+                    padding: EdgeInsets.all(10),
+                    alignment: Alignment.bottomLeft,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.yellow.shade600,
+                          Colors.black26,
+                          Colors.blue.shade800
+                        ],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                      ),
+                      color: Colors.white,
+                      image: DecorationImage(
+                          image: NetworkImage("https://picsum.photos/200/300"),
+                          fit: BoxFit.cover),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
+                      ),
+                    ),
+                    width: displayWidth(context) * 0.3,
+                    child: Text(
+                      "Lorem Ipsum",
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          // color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
-                  Container(
-                    height: 100,
-                    margin: EdgeInsets.all(10),
-                    color: Colors.white,
-                    child: Text("Hallo"),
-                  )
                 ],
-              )
+              ),
             ],
           ),
         ),
