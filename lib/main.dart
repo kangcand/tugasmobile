@@ -60,6 +60,14 @@ class _BottomMenuState extends State<BottomMenu> {
     ProfileScreen(),
   ];
 
+  final textScreen = [
+    "Home",
+    "Daftar Wisata",
+    "Detail Wisata",
+    "Booking Tiket Wisata",
+    "Profil"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,6 +93,10 @@ class _BottomMenuState extends State<BottomMenu> {
           });
         },
         letIndexChange: (index) => true,
+      ),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(textScreen[_page]),
       ),
       body: screens[_page],
     );
