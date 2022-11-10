@@ -55,7 +55,7 @@ class _BottomMenuState extends State<BottomMenu> {
   final screens = [
     HomeScreen(),
     ListWisataScreen(),
-    DetailWisataScreen(),
+    // DetailWisataScreen(),
     BookingWisataScreen(),
     ProfileScreen(),
   ];
@@ -63,7 +63,7 @@ class _BottomMenuState extends State<BottomMenu> {
   final textScreen = [
     "Home",
     "List Tour",
-    "Detail Tour",
+    // "Detail Tour",
     "Booking Tour Ticket",
     "Profile"
   ];
@@ -78,7 +78,7 @@ class _BottomMenuState extends State<BottomMenu> {
         items: <Widget>[
           Icon(Icons.home, size: 30),
           Icon(Icons.list, size: 30),
-          Icon(Icons.album_sharp, size: 30),
+          // Icon(Icons.album_sharp, size: 30),
           Icon(Icons.call_split, size: 30),
           Icon(Icons.perm_identity, size: 30),
         ],
