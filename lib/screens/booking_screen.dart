@@ -213,14 +213,6 @@ class _BookingWisataScreenState extends State<BookingWisataScreen> {
     } else {
       _showAlertDialog(context);
       _formKey.currentState!.save();
-      // String name = nameController.text;
-      // String umur = umurController.text;
-      // Navigator.push(
-      //   context,
-      //   MaterialPageRoute(
-      //     builder: (context) => ProfileScreen(name: name, umur: umur),
-      //   ),
-      // );
     }
   }
 
