@@ -84,11 +84,11 @@ class ProfileScreen extends StatelessWidget {
               height: 16,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: 75,
-                  height: 75,
+                  width: 50,
+                  height: 50,
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -109,8 +109,8 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: 75,
-                  height: 75,
+                  width: 50,
+                  height: 50,
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -131,8 +131,8 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: 75,
-                  height: 75,
+                  width: 50,
+                  height: 50,
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -153,8 +153,8 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: 75,
-                  height: 75,
+                  width: 50,
+                  height: 50,
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
