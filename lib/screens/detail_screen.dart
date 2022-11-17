@@ -28,6 +28,15 @@ class DetailWisataScreen extends StatelessWidget {
               SizedBox(
                 height: 32,
               ),
+              Center(
+                child: Text(
+                  "Ubud - Bali",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(
+                height: 24,
+              ),
               Container(
                 alignment: Alignment.bottomLeft,
                 height: displayHeight(context) * 0.25,
